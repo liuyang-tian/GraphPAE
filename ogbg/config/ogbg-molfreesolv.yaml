@@ -1,0 +1,36 @@
+device: 0
+
+# # Dataset settings
+num_atom_type: 119
+batch_size: 32
+num_workers: 0
+pooling: sum
+
+# # Training settings
+epochs: 100
+optim: adam
+init_lr: 0.0001
+weight_decay: 0.0
+schedule_opt: none
+
+# # Pretraining settings
+mask_ratio: 0.5
+masked_atom_loss: 1.0
+masked_pe_loss: 0.1
+atom_recon_type: sce
+alpha_l: 1.0
+noise_val: 0.001
+
+# # Encoder & Decoder setting
+enc_gnn_layer: 2
+embed_dim: 300
+gnn_dropout: 0.5
+gnn_edge_dropout: 0.5
+gnn_activation: relu
+task_head_activation: gelu
+
+# # Positional Encoding (PE) settings
+max_freqs: 15
+lap_norm: sym
+eigvec_norm: L2
+pos_activation: gelu

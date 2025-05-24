@@ -1,0 +1,40 @@
+device: 0
+
+# # Dataset settings
+feat_dim: 2089
+
+# # Training settings
+epochs: 1000
+optim: adam
+init_lr: 0.001
+weight_decay: 0.0
+use_schedule: true
+step_size: 50
+gamma: 0.5
+
+lr_eval: 0.01
+wd_eval: 0.0
+epochs_eval: 2000
+
+# # Pretraining settings
+mask_ratio: 0.5
+replace_ratio: 0.0
+
+masked_atom_loss: 1.0
+masked_pe_loss: 0.001
+atom_recon_type: sce
+alpha_l: 1.0
+noise_val: 0.01
+
+# # Encoder & Decoder setting
+enc_gnn_layer: 2
+embed_dim: 1024
+heads: 4
+gnn_dropout: 0.6
+gnn_edge_dropout: 0.0
+gnn_activation: elu
+task_head_activation: gelu
+
+# # Positional Encoding (PE) settings
+max_freqs: 50
+pos_activation: gelu
