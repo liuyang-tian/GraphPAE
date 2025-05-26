@@ -25,27 +25,31 @@ tqdm==4.66.5
 ### Download Datasets
 If not otherwise specified, the code will automatically download the required datasets during data preprocessing.
 
-For BlogCatalog, please unzip dataset/blog.zip before running the program.
+For BlogCatalog, please unzip `./dataset/blog.zip` before running the program.
 
-For Penn94, We use the datasets provided in ["Large Scale Learning on Non-Homophilous Graphs: New Benchmarks and Strong Simple Methods"]([https://arxiv.org/abs/2110.14446](https://arxiv.org/abs/2110.14446)). It is available on [Non-Homophily-Large-Scale](https://github.com/CUAI/Non-Homophily-Large-Scale/blob/master/data/facebook100/Penn94.mat). Download the file and put it at `dataset`. 
+For Penn94, We use the datasets provided in ["Large Scale Learning on Non-Homophilous Graphs: New Benchmarks and Strong Simple Methods"]([https://arxiv.org/abs/2110.14446](https://arxiv.org/abs/2110.14446)). It is available on [Non-Homophily-Large-Scale](https://github.com/CUAI/Non-Homophily-Large-Scale/blob/master/data/facebook100/Penn94.mat). Download the file and put it under `./dataset`. 
 
-For arXiv-year and Penn94, we adopt the same data splits as provided in the [Non-Homophily-Large-Scale](https://github.com/CUAI/Non-Homophily-Large-Scale/tree/master/data/splits). They have been placed in the dataset/ directory.
+For arXiv-year and Penn94, we adopt the same data splits as provided in the [Non-Homophily-Large-Scale](https://github.com/CUAI/Non-Homophily-Large-Scale/tree/master/data/splits). They have been saved in `./dataset`.
 
 ### Running
-(1) To preprocess the datasets, move into `node/` or `node_batch/` and run `preprocess.py`.
+(1) To preprocess the datasets, move into `./node` or `./node_batch` and run `preprocess.py`.
 
 (2) Train and evaluate GraphPAE for node classification by running `train_node.py` or `train_batch.py`.
 
 ## Graph Prediction
-Move into to `ogbg` and run `train_batch.py` for graph prediction tasks.
+Move into to `./ogbg` and run `train_graph.py` for graph prediction tasks.
 
 ## Transfer Learning
-(1) Download from [chem data](https://snap.stanford.edu/gnn-pretrain/data/chem_dataset.zip) (2.5GB), unzip it, and put `` and `` under `dataset`.
+### Download Datasets
+For ZINC-2M, fownload from [chem data](https://snap.stanford.edu/gnn-pretrain/data/chem_dataset.zip) (2.5GB), unzip it, and put `./zinc_standard_agent` under `./dataset`.
 
-(2) Move into `qm9` and run `pretraining.py` to pre-train the encoder.
+For QM9, fownload from [MoleculeNet](https://moleculenet.org/datasets-1) and put the file `qm9.csv` under `./dataset/qm9/raw/qm9.csv`
 
-(3) Fine-tune the pre-trained encoder on QM9 by runing `tune_qm9.py`.
+### Running
 
+(1) Move into `./qm9` and run `pretrain.py` to pre-train the encoder.
+
+(2) Fine-tune the pre-trained encoder on QM9 by runing `tune_qm9.py`.
 
 
 <!-- ## Cite -->
