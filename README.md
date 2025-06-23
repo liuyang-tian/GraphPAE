@@ -1,6 +1,6 @@
 # Graph Positional Autoencoders as Self-supervised Learners (GraphPAE)
 
-This is the Pytorch implementation for ["Graph Positional Autoencoders as Self-supervised Learners"]().
+This is the Pytorch implementation for ["Graph Positional Autoencoders as Self-supervised Learners"](https://arxiv.org/abs/2505.23345).
 
 ![](https://github.com/liuyang-tian/GraphPAE/blob/main/GraphPAE.png)
 
@@ -52,12 +52,13 @@ For QM9, fownload from [MoleculeNet](https://moleculenet.org/datasets-1) and put
 (2) Fine-tune the pre-trained encoder on QM9 by runing `tune_qm9.py`.
 
 
-<!-- ## Cite -->
-<!-- Welcome to kindly cite our work with:
+## Cite
+Welcome to kindly cite our work with:
 ```
-@inproceedings{liugraph,
-  title={Graph Distillation with Eigenbasis Matching},
-  author={Liu, Yang and Bo, Deyu and Shi, Chuan},
-  booktitle={Forty-first International Conference on Machine Learning}
+@article{liu2025graph,
+  title={Graph Positional Autoencoders as Self-supervised Learners},
+  author={Liu, Yang and Bo, Deyu and Cao, Wenxuan and Fang, Yuan and Li, Yawen and Shi, Chuan},
+  journal={arXiv preprint arXiv:2505.23345},
+  year={2025}
 }
-``` -->
+```
